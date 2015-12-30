@@ -1,0 +1,9 @@
+{
+ "description"                : "Graphic and sound enabled games."
+ ,"maintainer"                : "kenkeiras <kenkeiras (at) codigoparallevar dot com>"
+ ,"executable"                : "/bin/bash"
+ ,"gui"                       : {"cursors":true}
+ ,"sound-card"                : true
+ ,"basic-common-permissions"  : true
+}
+

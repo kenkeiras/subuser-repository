@@ -1,0 +1,10 @@
+{
+ "description"                : "Net, graphic and sound enabled games."
+ ,"maintainer"                : "kenkeiras <kenkeiras (at) codigoparallevar dot com>"
+ ,"executable"                : "/bin/bash"
+ ,"gui"                       : {"cursors":true}
+ ,"sound-card"                : true
+ ,"allow-network-access"      : true
+ ,"basic-common-permissions"  : true
+}
+

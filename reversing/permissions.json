@@ -1,0 +1,8 @@
+{
+ "description"                : "Various reversing tools."
+ ,"maintainer"                : "kenkeiras <kenkeiras (at) codigoparallevar dot com>"
+ ,"executable"                : "/bin/bash"
+ ,"allow-network-access"      : true
+ ,"basic-common-permissions"  : true
+}
+
