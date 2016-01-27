@@ -9,6 +9,9 @@ This is a personal repository for random images, feel free to use them as exampl
 
 Reversing image for CTFs with a `radare2` installation.
 
+### Firefox-developer
+
+Updatable Firefox developer edition image that allows updating.
 
 ### Games
 

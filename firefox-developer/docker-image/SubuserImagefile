@@ -1,0 +1,18 @@
+FROM-SUBUSER-IMAGE libx11@default
+
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends bzip2 libgtk-3-0 libasound2 \
+             libdbus-glib-1-2 gstreamer1.0-libav gstreamer1.0-plugins-good
+
+ADD https://download.mozilla.org/?product=firefox-aurora-latest-ssl&os=linux64&lang=en-US /opt/firefox.tar.bz2
+
+RUN tar xjvf /opt/firefox.tar.bz2
+RUN rm /opt/firefox.tar.bz2
+
+# Copy it to the user directory, to allow updating
+RUN echo '#!/usr/bin/env bash'                 > /opt/run-firefox
+RUN echo 'if [ ! -d ~/firefox/ ];then'        >> /opt/run-firefox
+RUN echo '    cp -Rv /firefox/ ~/'            >> /opt/run-firefox
+RUN echo 'fi'                                 >> /opt/run-firefox
+RUN echo '~/firefox/firefox'                  >> /opt/run-firefox
+RUN chmod o+x /opt/run-firefox
